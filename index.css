@@ -35,12 +35,9 @@ main {
     "patrick"
     "kira";
   max-width: 1025px;
-  margin: 10rem 0;
 }
 
 section {
-  margin-bottom: 1.875rem;
-  margin-right: 1.25rem;
   padding: 1.5rem;
   border-radius: 0.5rem;
 }
