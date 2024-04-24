@@ -1,0 +1,257 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 7%);
+  --LightGray: hsl(0, 0%, 81%);
+  --LightGrayishBlue: hsl(210, 46%, 95%);
+  --GrayishBlue: hsl(217, 19%, 35%);
+  --DarkGrayishBlue: hsl(219, 29%, 14%);
+  --Violet: hsl(263, 55%, 52%);
+  --LightViolet: #a775f1;
+  --TextLight: #cfcfcf;
+}
+
+body {
+  background-color: var(--LightGrayishBlue);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "daniel"
+    "jonathan"
+    "jeanette"
+    "patrick"
+    "kira";
+  max-width: 1025px;
+  margin: 10rem 0;
+}
+
+section {
+  margin-bottom: 1.875rem;
+  margin-right: 1.25rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.daniel-section {
+  background-color: var(--Violet);
+  color: var(--White);
+  grid-area: daniel;
+  background-image: url(./images//bg-pattern-quotation.svg);
+  background-repeat: no-repeat, repeat;
+  background-position: right top;
+  background-origin: content-box;
+}
+.jonathon-section {
+  background-color: var(--GrayishBlue);
+  color: var(--White);
+  grid-area: jonathan;
+}
+
+.janette-section {
+  background-color: var(--White);
+  color: var(--GrayishBlue);
+  grid-area: jeanette;
+}
+
+.kira-section {
+  background-color: var(--White);
+  color: var(--GrayishBlue);
+  grid-area: kira;
+}
+
+.patrick-section {
+  background-color: var(--DarkGrayishBlue);
+  color: var(--White);
+  grid-area: patrick;
+}
+
+.daniel-section > figure > figcaption > .avatar-desc {
+  color: var(--TextLight);
+}
+
+.daniel-section > .quote {
+  color: var(--TextLight);
+}
+
+.jonathon-section > quote,
+.patrick-section > quote {
+  color: var(--White);
+}
+
+.kira-section > quote,
+.janette-section > quote {
+  color: var(--DarkGrayishBlue);
+}
+
+.avatar-container {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.avatar-img {
+  margin-inline-end: 0.5rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: 0.125rem solid var(--LightViolet);
+}
+.avatar-name {
+  font-size: 0.8125rem;
+}
+
+.avatar-desc {
+  margin-top: 0.3rem;
+  font-size: 0.6875rem;
+}
+
+.desc {
+  margin-bottom: 1.875rem;
+  font-size: 1.25rem;
+}
+
+.quote {
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+@media screen and (min-width: 1025px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "daniel daniel jonathan kira"
+      "jeanette  patrick patrick kira";
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  body {
+    height: initial;
+  }
+  main {
+    margin: 2.5rem;
+  }
+}
+
+.barlow-semi-condensed-thin {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.barlow-semi-condensed-extralight {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.barlow-semi-condensed-light {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.barlow-semi-condensed-regular {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.barlow-semi-condensed-medium {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.barlow-semi-condensed-semibold {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.barlow-semi-condensed-bold {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.barlow-semi-condensed-extrabold {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.barlow-semi-condensed-black {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.barlow-semi-condensed-thin-italic {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.barlow-semi-condensed-extralight-italic {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.barlow-semi-condensed-light-italic {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.barlow-semi-condensed-regular-italic {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.barlow-semi-condensed-medium-italic {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.barlow-semi-condensed-semibold-italic {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.barlow-semi-condensed-bold-italic {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.barlow-semi-condensed-extrabold-italic {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.barlow-semi-condensed-black-italic {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
